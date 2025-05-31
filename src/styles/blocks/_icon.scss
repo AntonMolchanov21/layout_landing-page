@@ -1,0 +1,26 @@
+.icon {
+  display: block;
+  height: px-to-rem(24px);
+  width: px-to-rem(24px);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include transition(transform);
+
+  &:hover {
+    transform: scale(1.25);
+  }
+
+  @include on-tablet {
+    height: px-to-rem(32px);
+    width: px-to-rem(32px);
+  }
+
+  &--phone {
+    background-image: url(../images/icons/icon-phone.svg);
+  }
+
+  &--menu {
+    background-image: url(../images/icons/icon-burger-menu.svg);
+  }
+}

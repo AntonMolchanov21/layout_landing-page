@@ -1,0 +1,7 @@
+@function px-to-rem($px, $default-font-size-px: 16px) {
+  @return ($px / $default-font-size-px) * 1rem;
+}
+
+@function lh($line-height-px) {
+  @return px-to-rem($line-height-px);
+}

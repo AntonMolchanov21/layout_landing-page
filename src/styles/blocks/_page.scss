@@ -1,0 +1,10 @@
+.page {
+  font-family: Cinzel, serif;
+  font-size: $default-font-size;
+  font-weight: $default-font-weight;
+  line-height: px-to-rem(27px);
+
+  &__body {
+    margin: 0;
+  }
+}
