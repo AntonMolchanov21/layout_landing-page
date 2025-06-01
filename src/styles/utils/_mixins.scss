@@ -1,17 +1,17 @@
 @mixin on-tablet {
-  @media (min-width: 744px) {
+  @media (min-width: $tablet-min-width) {
     @content;
   }
 }
 
 @mixin on-desktop {
-  @media (min-width: 1260px) {
+  @media (min-width: $desktop-min-width) {
     @content;
   }
 }
 
 @mixin padding-content {
-  padding-inline: px-to-rem(20px);;
+  padding-inline: px-to-rem(20px);
 
   @include on-tablet {
     padding-inline: px-to-rem(50px);
@@ -22,9 +22,27 @@
   }
 }
 
-
 @mixin transition($properties...) {
   @each $property in $properties {
     transition: #{$property} $transition-speed $transition-function;
   }
 }
+
+@mixin page-grid {
+  --columns: 2;
+
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  @include on-tablet {
+    --columns: 6;
+
+    column-gap: 24px;
+  }
+
+  @include on-desktop {
+    --columns: 12;
+  }
+}
+

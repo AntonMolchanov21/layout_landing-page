@@ -3,6 +3,7 @@
   font-size: $default-font-size;
   font-weight: $default-font-weight;
   line-height: px-to-rem(27px);
+  color: $default-text-color;
   scroll-behavior: smooth;
 
   &__body {
