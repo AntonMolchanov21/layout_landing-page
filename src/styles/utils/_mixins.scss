@@ -10,6 +10,19 @@
   }
 }
 
+@mixin padding-content {
+  padding-inline: px-to-rem(20px);;
+
+  @include on-tablet {
+    padding-inline: px-to-rem(50px);
+  }
+
+  @include on-desktop {
+    padding-inline: px-to-rem(120px);
+  }
+}
+
+
 @mixin transition($properties...) {
   @each $property in $properties {
     transition: #{$property} $transition-speed $transition-function;

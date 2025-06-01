@@ -3,8 +3,25 @@
   font-size: $default-font-size;
   font-weight: $default-font-weight;
   line-height: px-to-rem(27px);
+  scroll-behavior: smooth;
 
   &__body {
     margin: 0;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+
+    @include transition(transform);
+
+    &:target {
+      transform: translateY(0);
+      pointer-events: all;
+    }
   }
 }

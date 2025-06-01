@@ -1,0 +1,41 @@
+.nav {
+  &__list {
+    flex-direction: column;
+    gap: px-to-rem(32px);
+    margin-top: px-to-rem(40px);
+    margin-bottom: px-to-rem(32px);
+
+    @include on-desktop {
+      margin-top: px-to-rem(55px);
+    }
+  }
+
+  .nav__item {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    position: relative;
+    font-size: px-to-rem(22px);
+    line-height: 100%;
+    letter-spacing: 2px;
+    color: inherit;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: #FFF;
+
+      @include transition(width);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.menu {
+  height: 100vh;
+  background-color: #D12D35;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFF;
+
+  &__content {
+    @include padding-content;
+  }
+
+  &__location:not(:last-child) {
+    margin-bottom: px-to-rem(8px);
+  }
+
+  &__phone-number {
+    display: block;
+    font-size: 1rem;
+    line-height: px-to-rem(27px);
+    color: inherit;
+    transform-origin: left center;
+
+    @include transition(transform);
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+
+  &__call-order {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 7px;
+    font-size: px-to-rem(12px);
+    line-height: px-to-rem(16px);
+    letter-spacing: 2px;
+    color: inherit;
+
+    @include transition(transform);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #FFF;
+      transform-origin: center;
+      transform: scaleX(1);
+
+      @include transition(transform);
+    }
+
+    &:hover::after {
+      transform: scaleX(0);
+    }
+  }
+}

@@ -22,5 +22,13 @@
 
   &--menu {
     background-image: url(../images/icons/icon-burger-menu.svg);
+
+    &:hover {
+      background-image: url(../images/icons/icon-burger-menu-hover.svg);
+    }
+  }
+
+  &--close {
+    background-image: url(../images/icons/icon-close.svg);
   }
 }
