@@ -1,5 +1,6 @@
 .nav {
   &__list {
+    display: flex;
     flex-direction: column;
     gap: px-to-rem(32px);
     margin-top: px-to-rem(40px);
